@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Modelo OSI</title>
+	</head>
+	<body background="Image/f1.jpg" text="black">
+		<center><h1>MODELO OSI</h1></center>
+
+		<center><h3><a href="index.html">Regresar</a></h3></center>
+
+		<table width="80%" align="center" border="1">
+			<tr>
+				<td><p><h3>¿Qué es el Modelo OSI (Open Sistems Interconnection)?</h3>
+				El modelo Open Systems Interconnection (OSI) es un modelo conceptual creado por la Organización Internacional para la Estandarización, el cual permite que diversos sistemas de comunicación se conecten usando protocolos estándar. En otras palabras, el OSI proporciona un estándar para que distintos sistemas de equipos puedan comunicarse entre sí.</p>
+
+				El modelo OSI se puede ver como un lenguaje universal para la conexión de las redes de equipos. Se basa en el concepto de dividir un sistema de comunicación en siete capas abstractas, cada una apilada sobre la anterior.</p></td>
+				<td height="160"><img src="Image/modeloosi.png" width="200" height="100%"></td>
+			</tr>
+		</table >
+			<br>
+		<table width="80%" align="center" border="1">
+			<tr>
+				<td><p><h3>7. Capa de aplicación</h3>
+				Esta es la única capa que interactúa directamente con los datos del usuario. Las aplicaciones de software, como los navegadores web y los clientes de correo electrónico, dependen de la capa de aplicación para iniciar las comunicaciones. Sin embargo, debe quedar claro que las aplicaciones de software cliente no forman parte de la capa de aplicación; más bien, la capa de aplicación es responsable de los protocolos y la manipulación de datos de los que depende el software para presentar datos significativos al usuario.</p>
+
+				<p>Los protocolos de la capa de aplicación incluyen HTTP, así como también SMTP (el protocolo simple de transferencia por correo electrónico, uno de los protocolos que permiten las comunicaciones por correo electrónico).</p></td>
+				<td height="160"><img src="Image/capa7.PNG" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><p><h3>6. Capa de presentación</h3>Esta capa es principalmente responsable de preparar los datos para que los pueda usar la capa de aplicación; en otras palabras, la capa 6 hace que los datos se preparen para su consumo por las aplicaciones. La capa de presentación es responsable de la traducción, el cifrado y la compresión de los datos.</p>
+
+				<p>Dos dispositivos de comunicación que se conectan entre sí podrían estar usando distintos métodos de codificación, por lo que la capa 6 es la responsable de traducir los datos entrantes en una sintaxis que la capa de aplicación del dispositivo receptor pueda comprender.</p>
+
+				<p>Si los dispositivos se comunican a través de una conexión cifrada, la capa 6 es responsable de añadir el cifrado en el extremo del emisor, así como de decodificar el cifrado en el extremo del receptor, para poder presentar a la capa de aplicación datos descifrados y legibles.</p>
+
+				<p>Después, la capa de presentación es también la encargada de comprimir los datos que recibe de la capa de aplicación antes de ser enviados a la capa 5. Esto ayuda a mejorar la velocidad y la eficiencia de la comunicación mediante la minimización de la cantidad de datos que serán transferidos.</p></td>
+				<td height="160"><img src="Image/capa6.PNG" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><p><h3>5. Capa de sesión</h3>La capa de sesión es la responsable de la apertura y cierre de comunicaciones entre dos dispositivos. Ese tiempo que transcurre entre la apertura de la comunicación y el cierre de esta se conoce como sesión. La capa de sesión garantiza que la sesión permanezca abierta el tiempo suficiente como para transferir todos los datos que se están intercambiando; tras esto, cerrará sin demora la sesión para evitar el desaprovechamiento de recursos.</p>
+
+				<p>La capa de sesión también sincroniza la transferencia de datos utilizando puntos de control. Por ejemplo, si un archivo de 100 megabytes está transfiriéndose, la capa de sesión podría fijar un punto de control cada 5 megabytes. En caso de desconexión o caída tras haberse transferido, por ejemplo, 52 megabytes, la sesión podría reiniciarse a partir del último punto de control, con lo cual solo quedarían unos 50 megabytes pendientes de transmisión. Sin esos puntos de control, la transferencia en su totalidad tendría que reiniciarse desde cero.</p></td>
+				<td height="160"><img src="Image/capa5.PNG" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><p><h3>4. Capa de transporte</h3>La capa 4 es la responsable de las comunicaciones de extremo a extremo entre dos dispositivos. Esto implica, antes de proceder a ejecutar el envío a la capa 3, tomar datos de la capa de sesión y fragmentarlos seguidamente en trozos más pequeños llamados segmentos. La capa de transporte del dispositivo receptor es la responsable luego de rearmar tales segmentos y construir con ellos datos que la capa de sesión pueda consumir.</p>
+
+				<p>La capa de transporte también es responsable del control de flujo y el control de errores. El control de flujo determina una velocidad óptima de transmisión para garantizar que un emisor con una conexión rápida no abrume a un receptor con una conexión lenta. La capa de transporte realiza un control de errores en el extremo receptor al garantizar que los datos recibidos estén completos y solicitar una retransmisión si no lo están.</p>
+
+				<p>Los protocolos de la capa de transporte incluyen el Protocolo de control de transmisión (TCP) y el User Datagram Protocol (UDP).</p></td>
+				<td height="160"><img src="Image/capa4.PNG" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><p><h3>3. Capa de red</h3>La capa de red es responsable de facilitar la transferencia de datos entre dos redes diferentes. Si los dispositivos que se comunican se encuentran en la misma red, entonces la capa de red no es necesaria. Esta capa divide los segmentos de la capa de transporte en unidades más pequeñas, llamadas paquetes, en el dispositivo del emisor, y vuelve a juntar estos paquetes en el dispositivo del receptor. La capa de red también busca la mejor ruta física para que los datos lleguen a su destino; esto se conoce como enrutamiento.</p>
+
+				<p>Los protocolos de la capa de red incluyen la dirección IP, el Protocolo de mensajes de control de Internet (ICMP), el Protocolo de mensajes de grupo de Internet (IGMP) y el paquete IPsec.</p></td>
+				<td height="160"><img src="Image/capa3.PNG" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><p><h3>2. Capa de enlace de datos</h3>La capa de enlace de datos es muy similar a la capa de red, excepto que la capa de enlace de datos facilita la transferencia de datos entre dos dispositivos dentro la misma red. La capa de enlace de datos toma los paquetes de la capa de red y los divide en partes más pequeñas que se denominan tramas. Al igual que la capa de red, esta capa también es responsable del control de flujo y el control de errores en las comunicaciones dentro de la red (la capa de transporte solo realiza tareas de control de flujo y de control de errores para las comunicaciones dentro de la red).</p></td>
+				<td height="160"><img src="Image/capa2.PNG" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><p><h3>1. Capa física</h3>Esta capa incluye el equipo físico implicado en la transferencia de datos, tal como los cables y los conmutadores de red. Esta también es la capa donde los datos  convierten en una secuencia de bits, es decir, una cadena de unos y ceros. La capa físicase de ambos dispositivos también debe estar de acuerdo en cuanto a una convención de señal para que los 1 puedan distinguirse de los 0 en ambos dispositivos.</p></td>
+				<td height="160"><img src="Image/capa1.PNG" width="200" height="100%"></td>
+			</tr>
+		</table>
+
+		<br><center><iframe width="560" height="315" src="https://www.youtube.com/embed/-QTNJws7PRg?si=r_ABArJGxByjTf61" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center><br>
+
+		<table width="80%" align="center" border="1">
+			<tr>
+				<td><h3>HTTP y HTTPS</h3><p>HTTP (HyperText Transfer Protocol) es el protocolo base de la web. Permite que los navegadores se comuniquen con servidores para solicitar páginas, imágenes, scripts y otros recursos web. Por ejemplo, cuando escribes una URL en el navegador, se hace una solicitud HTTP al servidor correspondiente. HTTPS es la versión segura de HTTP, que usa TLS (Transport Layer Security) para cifrar la información que se transmite, protegiendo así los datos de usuarios frente a posibles ataques o interceptaciones. Ambos protocolos funcionan en la capa de aplicación (7), ya que son usados directamente por las aplicaciones que interactúan con el usuario.</p></td>
+				<td height="160"><img src="Image/http.png" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>FTP (File Transfer Protocol)</h3><p>FTP es un protocolo utilizado para la transferencia de archivos entre sistemas a través de una red TCP/IP. Permite tanto subir como bajar archivos de un servidor a un cliente o entre servidores. Funciona a través de dos canales: uno para los comandos y otro para la transferencia de datos. Aunque es muy útil en la administración de sitios web, por ejemplo, es inseguro por defecto ya que los datos (incluidas las credenciales) se transmiten en texto claro.</p></td>
+				<td height="160"><img src="Image/ftp.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>SMTP (Simple Mail Transfer Protocol)</h3><p>SMTP es el protocolo utilizado para el envío de correos electrónicos. Trabaja en el modelo cliente-servidor para permitir que un servidor de correo envíe mensajes a otro servidor o dispositivo destinatario. Este protocolo sólo se utiliza para el envío de correos; la recepción y almacenamiento de mensajes generalmente se manejan mediante otros protocolos como IMAP o POP3. SMTP utiliza puertos específicos (por lo general, el puerto 25) y es fundamental para la infraestructura de correo electrónico global.</p></td>
+				<td height="160"><img src="Image/smtp.png" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>POP3 (Post Office Protocol 3)</h3><p>POP3 es un protocolo utilizado para descargar correos electrónicos desde un servidor de correo a un dispositivo local (como una computadora o teléfono). Después de descargar los correos, los elimina del servidor, lo que significa que los correos solo se pueden acceder desde ese dispositivo específico. Este protocolo es más adecuado para quienes desean gestionar sus correos de forma local y no requieren sincronización entre diferentes dispositivos.</p></td>
+				<td height="160"><img src="Image/pop3.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>IMAP (Internet Message Access Protocol)</h3><p>IMAP es similar a POP3, pero con una gran diferencia: no elimina los correos del servidor. En cambio, IMAP mantiene los correos en el servidor y permite la sincronización en múltiples dispositivos. Esto significa que puedes acceder a tus correos electrónicos desde cualquier dispositivo, y cualquier acción (como leer o mover correos) se refleja en todos ellos. IMAP es ideal para quienes usan varios dispositivos para acceder al correo electrónico (como teléfono, computadora y tablet).</p></td>
+				<td height="160"><img src="Image/imap.png" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>DNS (Domain Name System)</h3><p>DNS es un sistema jerárquico utilizado para traducir nombres de dominio legibles por humanos (como www.example.com) en direcciones IP (como 192.168.1.1) que las computadoras utilizan para identificar dispositivos en una red. DNS funciona como una "guía telefónica" de Internet, permitiendo que los navegadores web encuentren las direcciones de los servidores solicitados sin que los usuarios tengan que recordar direcciones IP numéricas. También se encarga de la resolución inversa, es decir, traducir direcciones IP en nombres de dominio.</p></td>
+				<td height="160"><img src="Image/dns.png" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>TCP (Transmission Control Protocol)</h3><p>TCP es un protocolo orientado a la conexión, lo que significa que establece una sesión confiable entre dos dispositivos antes de que los datos sean enviados. Proporciona fiabilidad mediante la comprobación de errores y la reordenación de paquetes para garantizar que los datos lleguen en el orden correcto. Este protocolo es ampliamente utilizado en aplicaciones donde la precisión y la fiabilidad son cruciales, como en la navegación web, el envío de correos electrónicos y la transferencia de archivos.</p></td>
+				<td height="160"><img src="Image/tcp.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>UDP (User Datagram Protocol)</h3><p>UDP es un protocolo sin conexión, es decir, no establece una conexión previa ni garantiza la entrega de los paquetes. Los paquetes pueden llegar fuera de orden o incluso no llegar, pero la velocidad y la simplicidad de UDP lo hacen ideal para aplicaciones que requieren baja latencia, como la transmisión de video en vivo, juegos en línea y servicios de voz sobre IP (VoIP), donde la pérdida de algunos paquetes es aceptable.</p></td>
+				<td height="160"><img src="Image/udp.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>IP (Internet Protocol)</h3><p>IP es el protocolo principal que rige el direccionamiento y el enrutamiento de paquetes de datos en una red. Se encarga de asignar direcciones a los dispositivos en una red y de determinar cómo los paquetes deben viajar de un dispositivo a otro. En el caso de IPv4, utiliza direcciones de 32 bits, lo que permite aproximadamente 4.3 mil millones de direcciones únicas. IPv6, por otro lado, utiliza direcciones de 128 bits, lo que ofrece una cantidad prácticamente ilimitada de direcciones.</p></td>
+				<td height="160"><img src="Image/ip.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>ICMP (Internet Control Message Protocol)</h3><p>ICMP es un protocolo de red utilizado para enviar mensajes de control y error. Es fundamental para el diagnóstico de problemas de conectividad en una red, y uno de sus usos más conocidos es el comando ping, que verifica la disponibilidad de un dispositivo en la red enviando paquetes ICMP y esperando una respuesta. ICMP también es utilizado por los routers para reportar problemas en el enrutamiento de los paquetes.</p></td>
+				<td height="160"><img src="Image/icmp.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>ARP (Address Resolution Protocol)</h3><p>ARP se utiliza para mapear direcciones IP a direcciones MAC dentro de una red local. Cuando un dispositivo necesita enviar datos a otro dentro de una red, usa ARP para encontrar la dirección MAC correspondiente a una dirección IP, asegurando que el paquete de datos llegue al dispositivo correcto en la red. Este protocolo es esencial en redes Ethernet.</p></td>
+				<td height="160"><img src="Image/arp.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>Ethernet</h3><p>Ethernet es el protocolo de red más común en redes locales (LAN). Define cómo los dispositivos acceden al medio físico compartido para transmitir datos. Cada dispositivo en una red Ethernet tiene una dirección única, llamada dirección MAC, que se utiliza para identificar el origen y destino de los datos en la red. Las conexiones Ethernet pueden ser por cables de cobre o fibra óptica, y hoy en día pueden soportar velocidades que van desde 100 Mbps hasta 100 Gbps.</p></td>
+				<td height="160"><img src="Image/ethernet.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>SMB (Server Message Block)</h3><p>SMB es un protocolo utilizado para compartir archivos, impresoras y otros recursos en una red. En sistemas Windows, es comúnmente utilizado para acceder y compartir archivos e impresoras entre computadoras. SMB permite que las aplicaciones en un dispositivo puedan acceder a los recursos en otro dispositivo dentro de la misma red local.</p></td>
+				<td height="160"><img src="Image/smb.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>SCTP (Stream Control Transmission Protocol)</h3><p>SCTP es un protocolo de transporte que proporciona características tanto de TCP como de UDP. Aunque ofrece la fiabilidad de TCP, también permite múltiples flujos de datos dentro de una sola conexión (uniflujo de TCP), lo que lo hace útil para aplicaciones que necesitan asegurar la entrega de datos sin perder el rendimiento, como la transmisión de voz en redes de telecomunicaciones.</p></td>
+				<td height="160"><img src="Image/sctp.png" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>RIP (Routing Information Protocol)</h3><p>RIP es un protocolo de enrutamiento utilizado para determinar la mejor ruta para los paquetes de datos en una red. Basado en la métrica de "número de saltos", RIP se utiliza en redes más pequeñas o menos complejas debido a su simplicidad, pero es menos eficiente que protocolos más avanzados como OSPF.</p></td>
+				<td height="160"><img src="Image/rip.jpg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>OSPF (Open Shortest Path First)</h3><p>OSPF es un protocolo de enrutamiento que utiliza el estado de enlace para determinar la mejor ruta para los paquetes. A diferencia de RIP, OSPF utiliza una métrica basada en el costo de la ruta (por ejemplo, la velocidad de la conexión) en lugar de solo contar los saltos, lo que lo hace más eficiente y adecuado para redes más grandes y complejas.</p></td>
+				<td height="160"><img src="Image/ospf.jpeg" width="200" height="100%"></td>
+			</tr>
+			<tr>
+				<td><h3>BGP (Border Gateway Protocol)</h3><p>BGP es el protocolo de enrutamiento utilizado para intercambiar información de enrutamiento entre diferentes sistemas autónomos (AS), es decir, entre diferentes redes. Es esencial para el funcionamiento global de Internet, ya que permite que los routers de diferentes proveedores de servicios de Internet intercambien rutas para asegurar que los paquetes encuentren su camino a través</p></td>
+				<td height="160"><img src="Image/bgp.jpg" width="200" height="100%"></td>
+			</tr>
+		</table>
+	</body>
+</html>
